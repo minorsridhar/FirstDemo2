@@ -1,0 +1,9 @@
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\bin\Release\FinanceDataAccess.dll.config
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\bin\Release\FinanceDataAccess.dll
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\bin\Release\FinanceDataAccess.pdb
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\bin\Release\EntityFramework.dll
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\bin\Release\EntityFramework.SqlServer.dll
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\bin\Release\EntityFramework.xml
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\bin\Release\EntityFramework.SqlServer.xml
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\obj\Release\FinanceDataAccess.dll
+c:\users\sridharan\documents\visual studio 2015\Projects\FinanceWebAPIs\FinanceDataAccess\obj\Release\FinanceDataAccess.pdb

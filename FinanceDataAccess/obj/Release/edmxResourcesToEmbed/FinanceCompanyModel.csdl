@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinanceCompanysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Symbol" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastSale" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MarketCapital" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ADRTSO" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="IPOYear" Type="Int16" />
+    <Property Name="Sector" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Industry" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuoteSite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exchange" Type="String" MaxLength="6" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="FinanceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companys" EntityType="Self.Company" />
+  </EntityContainer>
+</Schema>

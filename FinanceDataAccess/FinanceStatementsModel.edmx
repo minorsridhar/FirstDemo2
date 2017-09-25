@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FinanceStatementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IncomeStatement">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+            <PropertyRef Name="StatementId" />
+            <PropertyRef Name="StatementDate" />
+          </Key>
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="StatementId" Type="int" Nullable="false" />
+          <Property Name="StatementDate" Type="date" Nullable="false" />
+          <Property Name="TotalRevenue" Type="money" />
+          <Property Name="CostofRevenue" Type="money" />
+          <Property Name="GrossProfit" Type="money" />
+          <Property Name="OperatingExpenses" Type="money" />
+          <Property Name="SalesGenAdmin" Type="money" />
+          <Property Name="NonRecurringItems" Type="money" />
+          <Property Name="OtherOperatingItems" Type="money" />
+          <Property Name="OperatingIncome" Type="money" />
+          <Property Name="AddlIncExpitems" Type="money" />
+          <Property Name="EarningsBefIntTax" Type="money" />
+          <Property Name="InterestExpense" Type="money" />
+          <Property Name="EarningsBeforeTax" Type="money" />
+          <Property Name="IncomeTax" Type="money" />
+          <Property Name="MinorityInterest" Type="money" />
+          <Property Name="EquityEarnLossUnconSubs" Type="money" />
+          <Property Name="NetIncomeContOperations" Type="money" />
+          <Property Name="NetIncome" Type="money" />
+          <Property Name="NetIncApptoComShareholders" Type="money" />
+        </EntityType>
+        <EntityContainer Name="FinanceStatementModelStoreContainer">
+          <EntitySet Name="IncomeStatement" EntityType="Self.IncomeStatement" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FinanceStatementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IncomeStatement">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+            <PropertyRef Name="StatementId" />
+            <PropertyRef Name="StatementDate" />
+          </Key>
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="StatementId" Type="Int32" Nullable="false" />
+          <Property Name="StatementDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TotalRevenue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CostofRevenue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="GrossProfit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OperatingExpenses" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SalesGenAdmin" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NonRecurringItems" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OtherOperatingItems" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OperatingIncome" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AddlIncExpitems" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="EarningsBefIntTax" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="InterestExpense" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="EarningsBeforeTax" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="IncomeTax" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MinorityInterest" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="EquityEarnLossUnconSubs" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NetIncomeContOperations" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NetIncome" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="NetIncApptoComShareholders" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityContainer Name="FinanceStatementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IncomeStatements" EntityType="Self.IncomeStatement" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FinanceStatementModelStoreContainer" CdmEntityContainer="FinanceStatementEntities">
+          <EntitySetMapping Name="IncomeStatements">
+            <EntityTypeMapping TypeName="FinanceStatementModel.IncomeStatement">
+              <MappingFragment StoreEntitySet="IncomeStatement">
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="StatementId" ColumnName="StatementId" />
+                <ScalarProperty Name="StatementDate" ColumnName="StatementDate" />
+                <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+                <ScalarProperty Name="CostofRevenue" ColumnName="CostofRevenue" />
+                <ScalarProperty Name="GrossProfit" ColumnName="GrossProfit" />
+                <ScalarProperty Name="OperatingExpenses" ColumnName="OperatingExpenses" />
+                <ScalarProperty Name="SalesGenAdmin" ColumnName="SalesGenAdmin" />
+                <ScalarProperty Name="NonRecurringItems" ColumnName="NonRecurringItems" />
+                <ScalarProperty Name="OtherOperatingItems" ColumnName="OtherOperatingItems" />
+                <ScalarProperty Name="OperatingIncome" ColumnName="OperatingIncome" />
+                <ScalarProperty Name="AddlIncExpitems" ColumnName="AddlIncExpitems" />
+                <ScalarProperty Name="EarningsBefIntTax" ColumnName="EarningsBefIntTax" />
+                <ScalarProperty Name="InterestExpense" ColumnName="InterestExpense" />
+                <ScalarProperty Name="EarningsBeforeTax" ColumnName="EarningsBeforeTax" />
+                <ScalarProperty Name="IncomeTax" ColumnName="IncomeTax" />
+                <ScalarProperty Name="MinorityInterest" ColumnName="MinorityInterest" />
+                <ScalarProperty Name="EquityEarnLossUnconSubs" ColumnName="EquityEarnLossUnconSubs" />
+                <ScalarProperty Name="NetIncomeContOperations" ColumnName="NetIncomeContOperations" />
+                <ScalarProperty Name="NetIncome" ColumnName="NetIncome" />
+                <ScalarProperty Name="NetIncApptoComShareholders" ColumnName="NetIncApptoComShareholders" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

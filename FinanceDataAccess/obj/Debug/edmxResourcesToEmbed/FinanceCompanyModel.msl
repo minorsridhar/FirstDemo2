@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FinanceCompanysModelStoreContainer" CdmEntityContainer="FinanceEntities">
+    <EntitySetMapping Name="Companys">
+      <EntityTypeMapping TypeName="FinanceCompanysModel.Company">
+        <MappingFragment StoreEntitySet="Companys">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LastSale" ColumnName="LastSale" />
+          <ScalarProperty Name="MarketCapital" ColumnName="MarketCapital" />
+          <ScalarProperty Name="ADRTSO" ColumnName="ADRTSO" />
+          <ScalarProperty Name="IPOYear" ColumnName="IPOYear" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+          <ScalarProperty Name="QuoteSite" ColumnName="QuoteSite" />
+          <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

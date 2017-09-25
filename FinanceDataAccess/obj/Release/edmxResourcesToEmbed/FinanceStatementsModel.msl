@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FinanceStatementModelStoreContainer" CdmEntityContainer="FinanceStatementEntities">
+    <EntitySetMapping Name="IncomeStatements">
+      <EntityTypeMapping TypeName="FinanceStatementModel.IncomeStatement">
+        <MappingFragment StoreEntitySet="IncomeStatement">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="StatementId" ColumnName="StatementId" />
+          <ScalarProperty Name="StatementDate" ColumnName="StatementDate" />
+          <ScalarProperty Name="TotalRevenue" ColumnName="TotalRevenue" />
+          <ScalarProperty Name="CostofRevenue" ColumnName="CostofRevenue" />
+          <ScalarProperty Name="GrossProfit" ColumnName="GrossProfit" />
+          <ScalarProperty Name="OperatingExpenses" ColumnName="OperatingExpenses" />
+          <ScalarProperty Name="SalesGenAdmin" ColumnName="SalesGenAdmin" />
+          <ScalarProperty Name="NonRecurringItems" ColumnName="NonRecurringItems" />
+          <ScalarProperty Name="OtherOperatingItems" ColumnName="OtherOperatingItems" />
+          <ScalarProperty Name="OperatingIncome" ColumnName="OperatingIncome" />
+          <ScalarProperty Name="AddlIncExpitems" ColumnName="AddlIncExpitems" />
+          <ScalarProperty Name="EarningsBefIntTax" ColumnName="EarningsBefIntTax" />
+          <ScalarProperty Name="InterestExpense" ColumnName="InterestExpense" />
+          <ScalarProperty Name="EarningsBeforeTax" ColumnName="EarningsBeforeTax" />
+          <ScalarProperty Name="IncomeTax" ColumnName="IncomeTax" />
+          <ScalarProperty Name="MinorityInterest" ColumnName="MinorityInterest" />
+          <ScalarProperty Name="EquityEarnLossUnconSubs" ColumnName="EquityEarnLossUnconSubs" />
+          <ScalarProperty Name="NetIncomeContOperations" ColumnName="NetIncomeContOperations" />
+          <ScalarProperty Name="NetIncome" ColumnName="NetIncome" />
+          <ScalarProperty Name="NetIncApptoComShareholders" ColumnName="NetIncApptoComShareholders" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

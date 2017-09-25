@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinanceStatementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="IncomeStatement">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="StatementId" />
+      <PropertyRef Name="StatementDate" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="StatementId" Type="Int32" Nullable="false" />
+    <Property Name="StatementDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TotalRevenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CostofRevenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GrossProfit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OperatingExpenses" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalesGenAdmin" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NonRecurringItems" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OtherOperatingItems" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OperatingIncome" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AddlIncExpitems" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EarningsBefIntTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="InterestExpense" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EarningsBeforeTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IncomeTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MinorityInterest" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EquityEarnLossUnconSubs" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetIncomeContOperations" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetIncome" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetIncApptoComShareholders" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityContainer Name="FinanceStatementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="IncomeStatements" EntityType="Self.IncomeStatement" />
+  </EntityContainer>
+</Schema>

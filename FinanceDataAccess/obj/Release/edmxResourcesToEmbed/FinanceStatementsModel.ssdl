@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinanceStatementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IncomeStatement">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="StatementId" />
+      <PropertyRef Name="StatementDate" />
+    </Key>
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="StatementId" Type="int" Nullable="false" />
+    <Property Name="StatementDate" Type="date" Nullable="false" />
+    <Property Name="TotalRevenue" Type="money" />
+    <Property Name="CostofRevenue" Type="money" />
+    <Property Name="GrossProfit" Type="money" />
+    <Property Name="OperatingExpenses" Type="money" />
+    <Property Name="SalesGenAdmin" Type="money" />
+    <Property Name="NonRecurringItems" Type="money" />
+    <Property Name="OtherOperatingItems" Type="money" />
+    <Property Name="OperatingIncome" Type="money" />
+    <Property Name="AddlIncExpitems" Type="money" />
+    <Property Name="EarningsBefIntTax" Type="money" />
+    <Property Name="InterestExpense" Type="money" />
+    <Property Name="EarningsBeforeTax" Type="money" />
+    <Property Name="IncomeTax" Type="money" />
+    <Property Name="MinorityInterest" Type="money" />
+    <Property Name="EquityEarnLossUnconSubs" Type="money" />
+    <Property Name="NetIncomeContOperations" Type="money" />
+    <Property Name="NetIncome" Type="money" />
+    <Property Name="NetIncApptoComShareholders" Type="money" />
+  </EntityType>
+  <EntityContainer Name="FinanceStatementModelStoreContainer">
+    <EntitySet Name="IncomeStatement" EntityType="Self.IncomeStatement" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
